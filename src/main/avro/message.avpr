@@ -1,0 +1,36 @@
+{
+    "namespace": "example.gen.protom",
+    "protocol": "MessageProtocol",
+    "doc": "This is a message.",
+    "name": "Message",
+ 
+    "types": [
+        {"name":"Message", "type":"record",
+            "fields":[
+                {"name":"name", "type":"string"},
+                {"name":"type", "type":"int"},
+                {"name":"price", "type":"double"},
+                {"name":"valid", "type":"boolean"},
+                {"name":"content", "type":"string"}
+        ]},
+        {"name":"Person", "type":"record",
+            "fields":[
+                {"name":"name", "type":"string"},
+                {"name":"age", "type":"int"},
+                {"name":"msg", "type":"Message"}
+        ]}
+    ],
+ 
+    "messages":    {
+        "sendMessage":{
+            "doc" : "test",
+            "request" :[{"name":"message","type":"Message" }],
+            "response" :"Message"
+        },   
+        "pullMessage":{
+            "doc" : "pull",
+            "request" :[{"name":"message","type":"Message" }],
+            "response" :"Message"
+        }      
+    }   
+}

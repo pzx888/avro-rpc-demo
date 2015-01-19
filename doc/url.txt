@@ -1,0 +1,9 @@
+http://www.360doc.com/content/12/0515/08/2716732_211104190.shtml
+http://www.infoq.com/cn/articles/ApacheAvro/
+http://avro.apache.org/docs/current/gettingstartedjava.html
+http://avro.apache.org/docs/current/idl.html
+http://blog.csdn.net/neutrojan/article/details/9816159
+
+idl turn to protocol presence
+java -jar avro-tools.jar idl src/test/idl/input/namespaces.avdl /tmp/namespaces.avpr
+java -jar avro-tools-1.7.7.jar idl simple.avdl namespaces.avpr

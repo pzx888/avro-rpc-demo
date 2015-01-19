@@ -1,0 +1,58 @@
+{
+  "protocol" : "SimpleService",
+  "namespace" : "example.gen.idl",
+  "types" : [ {
+    "type" : "record",
+    "name" : "Message",
+    "fields" : [ {
+      "name" : "topic",
+      "type" : "string"
+    }, {
+      "name" : "content",
+      "type" : "bytes"
+    }, {
+      "name" : "createdTime",
+      "type" : "long"
+    }, {
+      "name" : "id",
+      "type" : "string"
+    }, {
+      "name" : "ipAddress",
+      "type" : "string"
+    }, {
+      "name" : "props",
+      "type" : {
+        "type" : "map",
+        "values" : "string"
+      }
+    } ]
+  } ],
+  "messages" : {
+    "publish" : {
+      "request" : [ {
+        "name" : "context",
+        "type" : "string"
+      }, {
+        "name" : "messages",
+        "type" : {
+          "type" : "array",
+          "items" : "Message"
+        }
+      } ],
+      "response" : "int"
+    },
+    "pull" : {
+      "request" : [ {
+        "name" : "context",
+        "type" : "string"
+      }, {
+        "name" : "messages",
+        "type" : {
+          "type" : "array",
+          "items" : "Message"
+        }
+      } ],
+      "response" : "int"
+    }
+  }
+}
