@@ -1,8 +1,8 @@
-h1. "avro-rpc-demo":https://github.com/pzx888/avro-rpc-demo
+"avro-rpc-demo"
 the demo codes for avro rpc ,java implements.
-*Author: zhexin Pan
+Author: zhexin Pan
 
-h2. INTRODUCTION
+INTRODUCTION
 This project includes three implementation demos in java.
 The first one is official website's quick start demo, that is two implementations of data serialization and deserialization, named SpecificMain, GenericMain; 
 The second one is Specific style interface call, named MailMain*;
